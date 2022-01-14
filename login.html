@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        
+        @font-face {
+        font-family: 'Goyang';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
+
+       
+         body { background-color: rgb(252, 205, 228); }
+
+
+       
+        .login_box {
+            width: 300px;
+            height: 400px;
+            margin-top: 10%;
+            margin-left: 40%;
+            text-align: center;
+            border: 2px solid gray;
+        }
+
+        #login_header {
+            margin-top: 64px;
+            margin-bottom: 46px;
+            font-family: 'Goyang';
+        }
+
+        #id_input_box,
+        #pw_input_box {
+            margin-bottom: 14px;
+            width: 180px;
+            height: 26px;
+            border: 0;
+            border-bottom: 1px solid lightgray;
+            font-family: 'Goyang';
+        }
+
+        #login_button {
+            margin-top: 40px;
+            border: 0;
+            height: 24px;
+            width: 120px;
+            font-family: 'Goyang';
+        }
+
+        #signup_button {
+            margin-top: 8px;
+            border: 0;
+            height: 24px;
+            width: 120px;
+            font-family: 'Goyang';
+        }
+        #back {
+            background: none;
+            border: 0px;
+            font-family: 'Goyang';
+            font-size: x-large;
+            float:left;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+            let idvalue = document.querySelector("#id_input_box");
+            let pwvalue = document.querySelector("#pw_input_box");
+            let button = document.querySelector("#login_button");
+            let signbutton =document.querySelector("#signup_button")
+
+            button.addEventListener("click", login)
+
+
+            function login() {
+                let value = idvalue.value;
+                let value2 = pwvalue.value;
+                if (value && value2) {
+
+                    alert("로그인 되었습니다.");
+                    location.href = 'mainpage.html'
+
+                } else if (value && !value2) {
+                    alert("비밀번호를 입력해주세요.");
+
+                } else {
+                    alert("아이디를 입력해주세요.");
+
+                }
+            }
+           
+            }
+        </script>
+</head>
+
+<body>
+    <nav>
+        <button id="back" onclick="location.href='mainpage.html'">뒤로가기↻</button>
+        </nav>
+    <div class="login_box">
+        <h1 id="login_header">로그인</h1>
+        <input id="id_input_box" type="text" placeholder="ID를 입력하세요">
+        <input id="pw_input_box" type="password" placeholder="PW를 입력하세요"><br>
+        <button id="login_button" onclick="buttonClicked()">로그인</button><br>
+        <button id="signup_button" onclick="location.href='signupPage.html'">회원가입</button>
+    </div>
+    
+</body>
+
+</html>

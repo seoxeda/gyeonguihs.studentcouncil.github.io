@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style> 
+        @font-face {
+        font-family: 'Goyang';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+         body { background-color: rgb(252, 205, 228); }
+        .login_box{
+          width: 300px;
+          height: 480px;
+          margin-top: 50px;
+          margin-left: 35%;
+          text-align: center;
+          border: 2px solid gray;
+        }
+        #login_header {
+          margin-top: 64px;
+          margin-bottom: 46px;
+          font-family: 'Goyang';
+          
+        }
+        #id_input_box, #pw_input_box, #name_input_box, #email_input_box {
+          margin-bottom: 14px;
+          width: 180px;
+          height: 26px;
+          border: 0;
+          border-bottom: 1px solid lightgray;
+          font-family: 'Goyang';
+        }
+        #signup_button {
+          margin-top: 40px;
+          border: 0;
+          height: 24px;
+          width: 120px;
+          font-family: 'Goyang';
+        }
+        #back {
+            background: none;
+            font-family: 'Goyang';
+            font-size: x-large;
+            float:left;
+            border: 0px;
+        }
+      </style>
+      <script>
+        
+        window.onload = function(){
+            let idvalue = document.querySelector("#id_input_box"); 
+            let pwvalue = document.querySelector("#pw_input_box"); 
+            let nmvalue = document.querySelector("#name_input_box");
+            let emvalue = document.querySelector("#email_input_box");
+            let button = document.querySelector("#signup_button");
+    
+            button.addEventListener("click", signup)
+            
+        
+            function signup() { 
+                let value = idvalue.value; 
+                let value2 = pwvalue.value;
+                let value3 = name_input_box.value;
+                let value4 = email_input_box.value;
+
+                if (value&&value2&&value3&&value4){
+                    
+                   alert("회원가입 되었습니다.");
+                   location.href='login.html'
+
+                  }else {
+                    alert("정보를 입력해주세요.");
+            
+                }
+            }
+    
+    } </script>
+    </head>
+    <body>
+    <nav>
+        <button id="back" onclick="location.href='mainpage.html'">뒤로가기↻</button>
+        </nav>
+    <div class="login_box">
+      <h1 id="login_header">회원가입</h1>
+      <input id="id_input_box" type="text" placeholder="아이디">
+      <input id="pw_input_box" type="password" placeholder="비밀번호">
+      <input id="name_input_box" type="text" placeholder="이름을 입력하세요">
+      <input id="email_input_box" type="text" placeholder="이메일을 입력하세요">
+      <button id="signup_button" onclick="buttonClicked()">회원가입</button>
+    </div>
+    
+    </body>
+    </html>

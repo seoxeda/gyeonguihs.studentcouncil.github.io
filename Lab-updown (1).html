@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운게임</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .contWrap{
+            position: relative;
+            width: 400px;
+            background-color: antiquewhite;
+            padding: 20px;
+            top : 40%;
+            left : 50%;
+            text-align: center;
+            transform: translate(-50%, -50%); 
+        }
+
+        input {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            max-width: 170px;
+        }
+
+        button {
+            font-size : 20px;
+            padding: 8px 20px;
+            text-align: center;
+        
+        }
+
+    </style>
+   
+
+    <script>
+
+        window.onload = function(){
+            let num = document.querySelector("#inputNum").value;
+            let result = document.querySelector(".result")
+            let button=document.querySelector(".starButton")
+            let randomNum=parseInt(Math.random()*100)
+            alert(randomNum);
+            button.addEventListener('click',()=>{
+
+            });
+            resultfunc = () => {
+                if(num==randomNum){
+                    result.innerHTML("정답");
+                }
+            }
+            
+            
+     
+
+
+
+        }
+
+
+    </script>
+
+    
+</head>
+<body>
+    <div class="contWrap">
+        <h3>Choose number</h3>
+        <p class="result">1부터 10사이</p>
+        <input id="inputNum"type="number" value="0" max="99" min="0">
+        <button type="button" class="startBtn">확인</button>
+    </div>
+    
+</body>
+</html>
